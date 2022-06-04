@@ -88,8 +88,8 @@ You must have a working [Node.js] environment.
 
 [lens]: https://github.com/lensapp/lens
 [trivy-operator]: https://github.com/aquasecurity/trivy-operator
-[trivy-operator-crds]: https://aquasecurity.github.io/trivy-operator/latest/crds/
-[Getting Started]: https://aquasecurity.github.io/trivy-operator/latest/operator/getting-started/
+[trivy-operator-crds]: https://github.com/aquasecurity/trivy-operator/tree/main/deploy/crd
+[Getting Started]: https://aquasecurity.github.io/trivy/latest/docs/kubernetes/operator/getting-started/
 
 [lens-installation]: https://github.com/lensapp/lens#installation
 [lens-releases]: https://github.com/lensapp/lens/releases
