@@ -84,9 +84,7 @@ You must have a working [Node.js] environment.
 - ConfigAuditReports and ClusterConfigAuditReports
 
   ![](./docs/images/configaudit_report.png)
-- CISKubeBenchReports
 
-  ![](./docs/images/ciskubebench_report.png)
 
 [lens]: https://github.com/lensapp/lens
 [trivy-operator]: https://github.com/aquasecurity/trivy-operator
