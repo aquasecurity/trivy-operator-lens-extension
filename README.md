@@ -96,7 +96,7 @@ You must have a working [Node.js] environment.
 [release-img]: https://img.shields.io/github/release/aquasecurity/trivy-operator-lens-extension.svg?logo=github
 [releases]: https://github.com/aquasecurity/trivy-operator-lens-extension/releases
 [github-all-releases-img]: https://img.shields.io/github/downloads/aquasecurity/trivy-operator-lens-extension/total?logo=github
-[package-registry]: https://github.com/aquasecurity/trivy-operator-lens-extension/packages/520430
+[package-registry]: https://github.com/aquasecurity/trivy-operator-lens-extension/packages/1461154
 [build-action-img]: https://github.com/aquasecurity/trivy-operator-lens-extension/workflows/Build/badge.svg
 [actions]: https://github.com/aquasecurity/trivy-operator-lens-extension/actions
 [license]: https://github.com/aquasecurity/trivy-operator-lens-extension/blob/master/LICENSE
