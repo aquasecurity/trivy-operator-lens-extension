@@ -1,10 +1,9 @@
 import {Renderer} from "@k8slens/extensions";
 import React from "react"
-import {ClusterVulnerabilityReportPage, VulnerabilityReportPage} from "./src/vulnerabilityreports/page";
-import {ClusterVulnerabilityReport, VulnerabilityReport} from "./src/vulnerabilityreports/types";
+import {VulnerabilityReportPage} from "./src/vulnerabilityreports/page";
+import {ExposedSecretReportPage} from "./src/exposedsecretreports/page";
+import {VulnerabilityReport} from "./src/vulnerabilityreports/types";
 import {
-    ClusterVulnerabilityReportDetails,
-    ClusterVulnerabilityReportDetailsProps,
     VulnerabilityReportDetails,
     VulnerabilityReportDetailsProps
 } from "./src/vulnerabilityreports/details";
@@ -19,6 +18,9 @@ import {
 } from "./src/configauditreports/details";
 import {WorkloadConfigAuditReports} from "./src/workloads/configauditreports";
 import {WorkloadVulnerabilityReports} from "./src/workloads/vulnerabilityreports";
+import {WorkloadExposedSecretReports} from "./src/workloads/exposedsecretreports";
+import {ExposedSecretReport} from "./src/exposedsecretreports/types";
+import {ExposedSecretReportDetails, ExposedSecretReportDetailsProps} from "./src/exposedsecretreports/details";
 
 export function CertificateIcon(props: Renderer.Component.IconProps) {
     return <Renderer.Component.Icon {...props} material="security"/>
@@ -37,6 +39,18 @@ export default class trivyOperatorExtension extends Renderer.LensExtension {
             id: "configauditreports",
             components: {
                 Page: () => <ConfigAuditReportPage extension={this}/>,
+            }
+        },
+        {
+            id: "exposedsecretreports",
+            components: {
+                Page: () => <ExposedSecretReportPage extension={this}/>,
+            }
+        },
+        {
+            id: "clusterconfigauditreports",
+            components: {
+                Page: () => <ClusterConfigAuditReportPage extension={this}/>,
             }
         }
     ]
@@ -67,8 +81,8 @@ export default class trivyOperatorExtension extends Renderer.LensExtension {
         },
         {
             parentId: "trivy-operator",
-            target: {pageId: "clustervulnerabilityreports"},
-            title: "ClusterVulnerabilityReports",
+            target: {pageId: "exposedsecretreports"},
+            title: "ExposedSecretReports",
             components: {
                 Icon: CertificateIcon
             }
@@ -105,6 +119,7 @@ export default class trivyOperatorExtension extends Renderer.LensExtension {
                     <React.Fragment>
                         <WorkloadConfigAuditReports {...props} />
                         <WorkloadVulnerabilityReports {...props}/>
+                        <WorkloadExposedSecretReports {...props}/>
                     </React.Fragment>
             }
         },
@@ -117,6 +132,7 @@ export default class trivyOperatorExtension extends Renderer.LensExtension {
                     <React.Fragment>
                         <WorkloadConfigAuditReports {...props} />
                         <WorkloadVulnerabilityReports {...props}/>
+                        <WorkloadExposedSecretReports {...props}/>
                     </React.Fragment>
             }
         },
@@ -129,6 +145,7 @@ export default class trivyOperatorExtension extends Renderer.LensExtension {
                     <React.Fragment>
                         <WorkloadConfigAuditReports {...props} />
                         <WorkloadVulnerabilityReports {...props}/>
+                        <WorkloadExposedSecretReports {...props}/>
                     </React.Fragment>
             }
         },
@@ -141,6 +158,7 @@ export default class trivyOperatorExtension extends Renderer.LensExtension {
                     <React.Fragment>
                         <WorkloadConfigAuditReports {...props} />
                         <WorkloadVulnerabilityReports {...props}/>
+                        <WorkloadExposedSecretReports {...props}/>
                     </React.Fragment>
             }
         },
@@ -150,14 +168,6 @@ export default class trivyOperatorExtension extends Renderer.LensExtension {
             components: {
                 Details: (props: VulnerabilityReportDetailsProps) => <VulnerabilityReportDetails
                     showObjectMeta={true} {...props} />
-            }
-        },
-        {
-            kind: ClusterVulnerabilityReport.kind,
-            apiVersions: [TRIVY_OPERATOR_API_VERSION],
-            components: {
-                Details: (props: ClusterVulnerabilityReportDetailsProps) => <ClusterVulnerabilityReportDetails
-                    showObjectMeta {...props} />
             }
         },
         {
@@ -173,6 +183,14 @@ export default class trivyOperatorExtension extends Renderer.LensExtension {
             apiVersions: [TRIVY_OPERATOR_API_VERSION],
             components: {
                 Details: (props: ClusterConfigAuditReportDetailsProps) => <ClusterConfigAuditReportDetails
+                    showObjectMeta {...props} />
+            }
+        },
+        {
+            kind: ExposedSecretReport.kind,
+            apiVersions: [TRIVY_OPERATOR_API_VERSION],
+            components: {
+                Details: (props: ExposedSecretReportDetailsProps) => <ExposedSecretReportDetails
                     showObjectMeta {...props} />
             }
         },
