@@ -22,9 +22,9 @@ This guide shows how to install the extension either from pre-built binary relea
 
 The following matrix indicates versions of this extension and compatible Lens releases.
 
-| Lens | Extension                                                                                  |
-|------|--------------------------------------------------------------------------------------------|
-| 4.0  | [0.0.2](https://github.com/aquasecurity/trivy-operator-lens-extension/releases/tag/v0.0.2) |
+| Lens | Extension                                                                                 |
+|------|-------------------------------------------------------------------------------------------|
+| 4.0  | [0.0.3(https://github.com/aquasecurity/trivy-operator-lens-extension/releases/tag/v0.0.3) |
 
 ### From the Binary Releases
 

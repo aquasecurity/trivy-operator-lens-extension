@@ -1,7 +1,7 @@
 {
   "name": "@aquasecurity/trivy-operator-lens-extension",
   "publisher": "aquasecurity.github.io",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Lens extension for viewing trivy-operator security information",
   "homepage": "https://github.com/aquasecurity/trivy-operator-lens-extension",
   "repository": {
