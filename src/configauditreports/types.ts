@@ -2,9 +2,10 @@ import {Renderer} from "@k8slens/extensions";
 import {Scanner} from "../trivy_operator/types";
 
 export type Summary = {
-    passCount?: number;
-    dangerCount: number;
-    warningCount: number;
+    criticalCount: number;
+    highCount: number;
+    mediumCount: number;
+    lowCount: number;
 }
 
 export class Check {

@@ -20,11 +20,8 @@ interface Props {
 const severityOrder = new Map([
     ["CRITICAL", 0],
     ["HIGH", 1],
-    ["danger", 2],
     ["MEDIUM", 3],
-    ["warning", 4],
     ["LOW", 5],
-    ["UNKNOWN", 6],
 ])
 
 const BySeverity = (v1: Check, v2: Check) => {
