@@ -1,7 +1,10 @@
 # Trivy-Operator Lens Extension
 
-> This is a [Lens][lens] extension for [trivy-operator][trivy-operator] which provides visibility into
-> vulnerability,misconfiguration and secrets assessments reports for Kubernetes workloads stored as [custom security resources][trivy-operator-crds].
+> This is a [Lens][lens] extension for [trivy-operator][trivy-operator] which provides visibility into following reports for Kubernetes workloads stored as [custom security resources][trivy-operator-crds].
+>- Vulnerability  
+>- Misconfiguration  
+>- Exposed Secrets  
+>- Rbac Assessments 
 
 [![GitHub Release][release-img]][releases]
 [![GitHub Build Actions][build-action-img]][actions]
