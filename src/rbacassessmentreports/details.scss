@@ -1,0 +1,30 @@
+.RbacAssessmentReportDetails {
+  .summary {
+    .Badge {
+      &.theme-critical {
+        color: white;
+        background-color: #cc1814;
+      }
+
+      &.theme-high {
+        color: white;
+        background-color: #ffa500;
+      }
+
+      &.theme-medium {
+        color: white;
+        background-color: #f0c20c;
+      }
+
+      &.theme-low {
+        color: white;
+        background-color: #096ab0;
+      }
+
+      &.theme-negligible {
+        color: white;
+        background-color: #00b09b;
+      }
+    }
+  }
+}
