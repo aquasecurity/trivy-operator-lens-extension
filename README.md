@@ -5,6 +5,7 @@
 >- Misconfiguration  
 >- Exposed Secrets  
 >- Rbac Assessments 
+>- k8s infra Assessments 
 
 [![GitHub Release][release-img]][releases]
 [![GitHub Build Actions][build-action-img]][actions]
