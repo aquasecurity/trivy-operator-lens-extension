@@ -22,13 +22,17 @@ import {WorkloadExposedSecretReports} from "./src/workloads/exposedsecretreports
 import {ExposedSecretReport} from "./src/exposedsecretreports/types";
 import {ExposedSecretReportDetails, ExposedSecretReportDetailsProps} from "./src/exposedsecretreports/details";
 import {ClusterRbacAssessmentReportPage, RbacAssessmentReportPage} from "./src/rbacassessmentreports/page";
-import {ClusterRbacAssessmentReport, RbacAssessmentReport} from "./src/rbacassessmentreports/types";
+import { ClusterRbacAssessmentReport, RbacAssessmentReport } from "./src/rbacassessmentreports/types";
+import {InfraAssessmentReport } from "./src/infraassessmentreports/types";
 import {
     ClusterRbacAssessmentReportDetailsProps,
     RbacAssessmentReportDetailsProps
 } from "./src/rbacassessmentreports/details";
+import {InfraAssessmentReportDetails, InfraAssessmentReportDetailsProps} from "./src/infraassessmentreports/details";
 import {WorkloadRbacAssessmentReports} from "./src/workloads/rbacassessmentreport";
 import {WorkloadClusterRbacAssessmentReports} from "./src/workloads/rbacassessmentreport";
+import {WorkloadInfraAssessmentReports} from "./src/workloads/infraassessmentreport";
+import {InfraAssessmentReportPage} from "./src/infraassessmentreports/page";
 
 export function CertificateIcon(props: Renderer.Component.IconProps) {
     return <Renderer.Component.Icon {...props} material="security"/>
@@ -71,6 +75,12 @@ export default class trivyOperatorExtension extends Renderer.LensExtension {
             id: "clusterrbacassessmentreports",
             components: {
                 Page: () => <ClusterRbacAssessmentReportPage extension={this}/>,
+            }
+        },
+        {
+            id: "infraassessmentreports",
+            components: {
+                Page: () => <InfraAssessmentReportPage extension={this}/>,
             }
         }
     ]
@@ -143,6 +153,8 @@ export default class trivyOperatorExtension extends Renderer.LensExtension {
                     <React.Fragment>
                         <WorkloadConfigAuditReports {...props} />
                         <WorkloadVulnerabilityReports {...props}/>
+                        <WorkloadExposedSecretReports {...props}/>
+                        <WorkloadInfraAssessmentReports {...props}/>
                     </React.Fragment>
             }
         },
@@ -156,6 +168,7 @@ export default class trivyOperatorExtension extends Renderer.LensExtension {
                         <WorkloadConfigAuditReports {...props} />
                         <WorkloadVulnerabilityReports {...props}/>
                         <WorkloadExposedSecretReports {...props}/>
+                        <WorkloadInfraAssessmentReports {...props}/>
                     </React.Fragment>
             }
         },
@@ -169,6 +182,7 @@ export default class trivyOperatorExtension extends Renderer.LensExtension {
                         <WorkloadConfigAuditReports {...props} />
                         <WorkloadVulnerabilityReports {...props}/>
                         <WorkloadExposedSecretReports {...props}/>
+                        <WorkloadInfraAssessmentReports {...props}/>
                     </React.Fragment>
             }
         },
@@ -182,6 +196,7 @@ export default class trivyOperatorExtension extends Renderer.LensExtension {
                         <WorkloadConfigAuditReports {...props} />
                         <WorkloadVulnerabilityReports {...props}/>
                         <WorkloadExposedSecretReports {...props}/>
+                        <WorkloadInfraAssessmentReports {...props}/>
                     </React.Fragment>
             }
         },
@@ -195,6 +210,7 @@ export default class trivyOperatorExtension extends Renderer.LensExtension {
                         <WorkloadConfigAuditReports {...props} />
                         <WorkloadVulnerabilityReports {...props}/>
                         <WorkloadExposedSecretReports {...props}/>
+                        <WorkloadInfraAssessmentReports {...props}/>
                     </React.Fragment>
             }
         },
@@ -257,6 +273,14 @@ export default class trivyOperatorExtension extends Renderer.LensExtension {
             apiVersions: [TRIVY_OPERATOR_API_VERSION],
             components: {
                 Details: (props: RbacAssessmentReportDetailsProps) => <ConfigAuditReportDetails
+                    showObjectMeta {...props} />
+            }
+        },
+        {
+            kind: InfraAssessmentReport.kind,
+            apiVersions: [TRIVY_OPERATOR_API_VERSION],
+            components: {
+                Details: (props: InfraAssessmentReportDetailsProps) => <InfraAssessmentReportDetails
                     showObjectMeta {...props} />
             }
         },
