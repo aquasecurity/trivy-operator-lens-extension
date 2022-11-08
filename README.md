@@ -30,6 +30,8 @@ The following matrix indicates versions of this extension and compatible Lens re
 | 4.0  | [0.0.5](https://github.com/aquasecurity/trivy-operator-lens-extension/releases/tag/v0.0.5) |
 | 5.0  | [0.0.5](https://github.com/aquasecurity/trivy-operator-lens-extension/releases/tag/v0.0.5) |
 | 6.0  | [0.0.6](https://github.com/aquasecurity/trivy-operator-lens-extension/releases/tag/v0.0.6) |
+| 6.0  | [0.1.0](https://github.com/aquasecurity/trivy-operator-lens-extension/releases/tag/v0.1.0) |
+
 
 ### From the Binary Releases
 
